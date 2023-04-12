@@ -32,6 +32,14 @@ public class CriteriaRepositoryTest extends AbstractIntegrationTest {
     public void getCoalesceSummedValue() {
         BigDecimal result = criteriaRepository.getCoalesceSummedValue();
 
-        assertThat(result, equalTo(BigDecimal.valueOf(2429.6030356778)));
+        assertThat(result, equalTo(2429.6030356778));
     }
+
+    @Test
+    public void getCoalesceRoundedSummedValue() {
+        BigDecimal result = criteriaRepository.getCoalesceRoundedSummedValue();
+
+        assertThat(result, equalTo(2429.6030356778));
+    }
+
 }
